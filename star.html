@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별과 같이 빛나리라</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        svg {
+            position: relative;
+            margin-top: 20px;
+        }
+        .input-field {
+            position: absolute; text-align: center;
+            transform: translate(-50%, -50%);
+            width: 80px;
+        }
+    </style>
+    <script>
+        // 마우스 오른쪽 클릭 방지
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('소스 보기 차단됨!');
+        });
+
+        // 개발자 도구 단축키 방지
+        document.addEventListener('keydown', function(e) {
+            // F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+C 등 차단
+            if (e.key === "F12" || 
+                (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C")) ||
+                (e.ctrlKey && e.key === "U")) {
+                e.preventDefault();
+                alert('소스 보기 차단됨!');
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>별과 같이 빛나리라</h1>
+    <div style="position: relative; width: 600px; height: 600px; margin: 0 auto;">
+        <svg width="600" height="600">
+            <!-- 별 모양 연결선 -->
+            <path d="M300,50 L370,220 L550,220 L400,340 L460,500 L300,410 L140,500 L200,340 L50,220 L230,220 Z" 
+                  stroke="black" fill="none" stroke-width="2"/>
+        </svg>
+        
+        <!-- 입력 필드 배치 -->
+        <input class="input-field" style="top: 50px; left: 300px;" placeholder="강점 1"/>
+        <input class="input-field" style="top: 250px; left: 0px;" placeholder="강점 2"/>
+        <input class="input-field" style="top: 250px; left: 600px;" placeholder="강점 3"/>
+        <input class="input-field" style="top: 530px; left: 140px;" placeholder="강점 4"/>
+        <input class="input-field" style="top: 530px; left: 460px;" placeholder="강점 5"/>
+
+        <input class="input-field" style="top: 255px; left: 230px;" placeholder="자원 1"/>
+        <input class="input-field" style="top: 255px; left: 370px;" placeholder="자원 2"/>
+        <input class="input-field" style="top: 350px; left: 240px;" placeholder="자원 3"/>
+        <input class="input-field" style="top: 350px; left: 360px;" placeholder="자원 4"/>
+        <input class="input-field" style="top: 415px; left: 300px;" placeholder="자원 5"/>
+
+        <input class="input-field" style="top: 140px; left: 220px;" placeholder="가치 1"/>
+        <input class="input-field" style="top: 140px; left: 380px;" placeholder="가치 2"/>
+        <input class="input-field" style="top: 225px; left: 150px;" placeholder="가치 3"/>
+        <input class="input-field" style="top: 225px; left: 450px;" placeholder="가치 4"/>
+        <input class="input-field" style="top: 310px; left: 75px;" placeholder="가치 5"/>
+        <input class="input-field" style="top: 310px; left: 525px;" placeholder="가치 6"/>
+        <input class="input-field" style="top: 420px; left: 130px;" placeholder="가치 7"/>
+        <input class="input-field" style="top: 420px; left: 470px;" placeholder="가치 8"/>
+        <input class="input-field" style="top: 490px; left: 250px;" placeholder="가치 9"/>
+        <input class="input-field" style="top: 490px; left: 350px;" placeholder="가치 10"/>
+    </div>
+  <h1>한국FT코칭연구원</h1>
+</body>
+</html>
